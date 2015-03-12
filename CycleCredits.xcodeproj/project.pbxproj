@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C507EF4B1AADF30700AE8D85 /* new_route.png in Resources */ = {isa = PBXBuildFile; fileRef = C507EF4A1AADF30700AE8D85 /* new_route.png */; };
+		C507EF4F1AAE02EC00AE8D85 /* CarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */; };
 		C5AE59C81AA4A6F700DAB6B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59C71AA4A6F700DAB6B6 /* AppDelegate.swift */; };
 		C5AE59CB1AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59C91AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld */; };
 		C5AE59CD1AA4A6F700DAB6B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59CC1AA4A6F700DAB6B6 /* ViewController.swift */; };
@@ -17,6 +19,7 @@
 		C5AE59EB1AA4ADDF00DAB6B6 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EA1AA4ADDF00DAB6B6 /* RoutesViewController.swift */; };
 		C5AE59ED1AA4AF3F00DAB6B6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */; };
 		C5AE59EF1AA4B5E400DAB6B6 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */; };
+		C5AE59F11AA5C1E700DAB6B6 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59F01AA5C1E700DAB6B6 /* Calculations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C507EF4A1AADF30700AE8D85 /* new_route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_route.png; sourceTree = "<group>"; };
+		C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPickerViewController.swift; sourceTree = "<group>"; };
 		C5AE59C21AA4A6F700DAB6B6 /* CycleCredits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleCredits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AE59C61AA4A6F700DAB6B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5AE59C71AA4A6F700DAB6B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +49,7 @@
 		C5AE59EA1AA4ADDF00DAB6B6 /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
 		C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		C5AE59F01AA5C1E700DAB6B6 /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +70,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C507EF491AADF30700AE8D85 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C507EF4A1AADF30700AE8D85 /* new_route.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		C5AE59B91AA4A6F700DAB6B6 = {
 			isa = PBXGroup;
 			children = (
 				C5AE59C41AA4A6F700DAB6B6 /* CycleCredits */,
 				C5AE59DD1AA4A6F700DAB6B6 /* CycleCreditsTests */,
 				C5AE59C31AA4A6F700DAB6B6 /* Products */,
+				C507EF491AADF30700AE8D85 /* images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +110,8 @@
 				C5AE59EA1AA4ADDF00DAB6B6 /* RoutesViewController.swift */,
 				C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */,
 				C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */,
+				C5AE59F01AA5C1E700DAB6B6 /* Calculations.swift */,
+				C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */,
 			);
 			path = CycleCredits;
 			sourceTree = "<group>";
@@ -204,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C507EF4B1AADF30700AE8D85 /* new_route.png in Resources */,
 				C5AE59D01AA4A6F700DAB6B6 /* Main.storyboard in Resources */,
 				C5AE59D51AA4A6F700DAB6B6 /* LaunchScreen.xib in Resources */,
 				C5AE59D21AA4A6F700DAB6B6 /* Images.xcassets in Resources */,
@@ -227,8 +245,10 @@
 				C5AE59CD1AA4A6F700DAB6B6 /* ViewController.swift in Sources */,
 				C5AE59EF1AA4B5E400DAB6B6 /* SampleData.swift in Sources */,
 				C5AE59C81AA4A6F700DAB6B6 /* AppDelegate.swift in Sources */,
+				C507EF4F1AAE02EC00AE8D85 /* CarPickerViewController.swift in Sources */,
 				C5AE59EB1AA4ADDF00DAB6B6 /* RoutesViewController.swift in Sources */,
 				C5AE59ED1AA4AF3F00DAB6B6 /* Route.swift in Sources */,
+				C5AE59F11AA5C1E700DAB6B6 /* Calculations.swift in Sources */,
 				C5AE59CB1AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +441,7 @@
 				C5AE59E61AA4A6F700DAB6B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5AE59E71AA4A6F700DAB6B6 /* Build configuration list for PBXNativeTarget "CycleCreditsTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +450,7 @@
 				C5AE59E91AA4A6F700DAB6B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,25 +1,34 @@
 //
-//  RoutesViewController.swift
+//  CarPickerViewController.swift
 //  CycleCredits
 //
-//  Created by Patrick Murphy on 02/03/2015.
+//  Created by Patrick Murphy on 09/03/2015.
 //  Copyright (c) 2015 Patrick Murphy. All rights reserved.
 //
 
 import UIKit
 
-class RoutesViewController: UITableViewController {
+class CarPickerViewController: UITableViewController {
+    var selectedCarBand:String? = nil
+    var selectedCarBandIndex:Int? = nil
     
-    @IBAction func cancelToRoutesViewController(segue:UIStoryboardSegue) {
-    }
-    @IBAction func saveRouteDetail(segue:UIStoryboardSegue) {
-    }
-    
-    // Load hardcoaded data
-    var routes: [Route] = routesData
+    var carCo2Bands:[String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        carCo2Bands = [
+            "A1 €170",
+            "A2 €180",
+            "A3 €190",
+            "A4 €200",
+            "B1 €270",
+            "B2 €280",
+            "C  €390",
+            "D  €570",
+            "E  €750",
+            "F  €1,200",
+            "G  €2,350"
+        ]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,26 +49,43 @@ class RoutesViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return routes.count
+        return carCo2Bands.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("CarBandCell", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel?.text = carCo2Bands[indexPath.row]
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("RouteCell", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-        let route = routes[indexPath.row] as Route
-        
-        
-        cell.textLabel?.text = route.date
-        // create a string value from double
-        
-        cell.detailTextLabel?.text = String(format: "%0.02f km", route.distance)
-
+        // set a checkmark for currently selected car band
+        if indexPath.row == selectedCarBandIndex {
+            cell.accessoryType = .Checkmark
+        }
+        else {
+            cell.accessoryType = .None
+        }
         return cell
     }
     
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // Other row is selected - need to deselect it
+        if let index = selectedCarBandIndex {
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0))
+            cell?.accessoryType = .None
+        }
+        selectedCarBandIndex = indexPath.row
+        selectedCarBand = carCo2Bands[indexPath.row]
+        
+        println("selected car band is \(selectedCarBand)")
+        
+        // update the checkmark for the current row
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.accessoryType = .Checkmark
+        
+    }
+
 
     /*
     // Override to support conditional editing of the table view.

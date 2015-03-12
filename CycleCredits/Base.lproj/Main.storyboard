@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pRX-Yt-PdD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pRX-Yt-PdD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -40,11 +40,82 @@
                             <outlet property="delegate" destination="orV-2X-j1R" id="qHe-5a-CLk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Routes" id="AtD-cR-2ST"/>
+                    <navigationItem key="navigationItem" title="Routes" id="AtD-cR-2ST">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VKs-Xc-zbm">
+                            <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="vuz-VZ-beX" kind="modal" id="Gha-4U-IVa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E59-lw-t1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="435"/>
+            <point key="canvasLocation" x="806" y="435"/>
+        </scene>
+        <!--Choose Car Band-->
+        <scene sceneID="Kla-z8-OsJ">
+            <objects>
+                <tableViewController id="1il-Wc-LDj" customClass="CarPickerViewController" customModule="CycleCredits" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6Db-EN-c1v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarBandCell" textLabel="WKO-II-iYc" style="IBUITableViewCellStyleDefault" id="dhq-4g-9E6">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dhq-4g-9E6" id="oke-7n-qf3">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WKO-II-iYc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1il-Wc-LDj" id="6SB-Hh-i0M"/>
+                            <outlet property="delegate" destination="1il-Wc-LDj" id="SVf-9N-N9Y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose Car Band" id="bZu-vL-vs3">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hnk-Np-jiY">
+                            <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="C0j-lg-I9X" kind="unwind" unwindAction="cancelToRoutesViewController:" id="yLd-p1-6P9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="son-RF-xUE">
+                            <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2K-nY-XsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="C0j-lg-I9X" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="435"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d0X-Kr-Hde">
+            <objects>
+                <navigationController id="vuz-VZ-beX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RyS-ov-HYH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MWc-bM-ajL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1il-Wc-LDj" kind="relationship" relationship="rootViewController" id="Mxi-Fd-JxW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jL5-Sl-axv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="435"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EoQ-rq-vAH">
