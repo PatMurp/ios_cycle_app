@@ -44,22 +44,50 @@ class RoutesViewController: UITableViewController {
     }
 
     
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        
+//        let cell = tableView.dequeueReusableCellWithIdentifier("RouteCell", forIndexPath: indexPath) as UITableViewCell
+//
+//        // Configure the cell...
+//        let route = routes[indexPath.row] as Route
+//        
+//        
+//        cell.textLabel?.text = route.date
+//        // create a string value from double
+//        
+//        cell.detailTextLabel?.text = String(format: "%0.02f km", route.distance)
+//
+//        return cell
+//    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("RouteCell", forIndexPath: indexPath) as UITableViewCell
-
+        
         // Configure the cell...
         let route = routes[indexPath.row] as Route
         
         
-        cell.textLabel?.text = route.date
-        // create a string value from double
+//        cell.textLabel?.text = route.date
+//        // create a string value from double
+//        
+//        cell.detailTextLabel?.text = String(format: "%0.02f km", route.distance)
         
-        cell.detailTextLabel?.text = String(format: "%0.02f km", route.distance)
-
+        if let dateLabel = cell.viewWithTag(100) as? UILabel {
+            dateLabel.text = route.date
+        }
+        
+        if let distLabel = cell.viewWithTag(101) as? UILabel {
+            distLabel.text = String(format: "%0.02f km", route.distance)
+        }
+        
+        if let co2Label = cell.viewWithTag(102) as? UILabel {
+            co2Label.text = String(format: "%0.03f kg", calcCo2Emission(route.distance, 90))// hardcoded co2 band
+        }
+        
+        
         return cell
     }
-    
 
     /*
     // Override to support conditional editing of the table view.

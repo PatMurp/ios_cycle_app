@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C507EF4B1AADF30700AE8D85 /* new_route.png in Resources */ = {isa = PBXBuildFile; fileRef = C507EF4A1AADF30700AE8D85 /* new_route.png */; };
 		C507EF4F1AAE02EC00AE8D85 /* CarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */; };
+		C57664E81AC704BD00179F6A /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57664E71AC704BD00179F6A /* Calc.swift */; };
 		C5AE59C81AA4A6F700DAB6B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59C71AA4A6F700DAB6B6 /* AppDelegate.swift */; };
 		C5AE59CB1AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59C91AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld */; };
 		C5AE59CD1AA4A6F700DAB6B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59CC1AA4A6F700DAB6B6 /* ViewController.swift */; };
@@ -19,7 +20,6 @@
 		C5AE59EB1AA4ADDF00DAB6B6 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EA1AA4ADDF00DAB6B6 /* RoutesViewController.swift */; };
 		C5AE59ED1AA4AF3F00DAB6B6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */; };
 		C5AE59EF1AA4B5E400DAB6B6 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */; };
-		C5AE59F11AA5C1E700DAB6B6 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59F01AA5C1E700DAB6B6 /* Calculations.swift */; };
 		C5C10FF61AC6EC480077ABCC /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C5C10FF51AC6EC470077ABCC /* gitignore */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 /* Begin PBXFileReference section */
 		C507EF4A1AADF30700AE8D85 /* new_route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_route.png; sourceTree = "<group>"; };
 		C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPickerViewController.swift; sourceTree = "<group>"; };
+		C57664E71AC704BD00179F6A /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calc.swift; path = ../Calc.swift; sourceTree = "<group>"; };
 		C5AE59C21AA4A6F700DAB6B6 /* CycleCredits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleCredits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AE59C61AA4A6F700DAB6B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5AE59C71AA4A6F700DAB6B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		C5AE59EA1AA4ADDF00DAB6B6 /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
 		C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
-		C5AE59F01AA5C1E700DAB6B6 /* Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
 		C5C10FF51AC6EC470077ABCC /* gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,8 +112,8 @@
 				C5AE59EA1AA4ADDF00DAB6B6 /* RoutesViewController.swift */,
 				C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */,
 				C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */,
-				C5AE59F01AA5C1E700DAB6B6 /* Calculations.swift */,
 				C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */,
+				C57664E71AC704BD00179F6A /* Calc.swift */,
 				C5C10FF51AC6EC470077ABCC /* gitignore */,
 			);
 			path = CycleCredits;
@@ -246,13 +246,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57664E81AC704BD00179F6A /* Calc.swift in Sources */,
 				C5AE59CD1AA4A6F700DAB6B6 /* ViewController.swift in Sources */,
 				C5AE59EF1AA4B5E400DAB6B6 /* SampleData.swift in Sources */,
 				C5AE59C81AA4A6F700DAB6B6 /* AppDelegate.swift in Sources */,
 				C507EF4F1AAE02EC00AE8D85 /* CarPickerViewController.swift in Sources */,
 				C5AE59EB1AA4ADDF00DAB6B6 /* RoutesViewController.swift in Sources */,
 				C5AE59ED1AA4AF3F00DAB6B6 /* Route.swift in Sources */,
-				C5AE59F11AA5C1E700DAB6B6 /* Calculations.swift in Sources */,
 				C5AE59CB1AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
