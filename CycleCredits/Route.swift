@@ -12,9 +12,11 @@ import UIKit
 class Route: NSObject {
     var date : String
     var distance: Double
+    var co2band: String
     
-    init(date: String, distance: Double) {
+    init(date: String, distance: Double, co2band: String) {
         self.date = date
         self.distance = distance
+        self.co2band = co2band
     }
 }

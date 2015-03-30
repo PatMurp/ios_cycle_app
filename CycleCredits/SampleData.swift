@@ -8,7 +8,7 @@
 
 import UIKit
 
-let routesData = [Route(date: "03-Jan-15", distance: 4.5),
-    Route(date: "08-Jan-15", distance: 7),
-    Route(date: "10-Jan-15", distance: 6),
-    Route(date: "15-Jan-15", distance: 8.25)]
+let routesData = [Route(date: "03-Jan-15", distance: 4.5, co2band: "A4"),
+    Route(date: "08-Jan-15", distance: 7, co2band: "A3"),
+    Route(date: "10-Jan-15", distance: 6, co2band: "B1"),
+    Route(date: "15-Jan-15", distance: 8.25, co2band: "C")]

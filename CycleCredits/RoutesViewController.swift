@@ -82,9 +82,8 @@ class RoutesViewController: UITableViewController {
         }
         
         if let co2Label = cell.viewWithTag(102) as? UILabel {
-            co2Label.text = String(format: "%0.03f kg", calcCo2Emission(route.distance, 90))// hardcoded co2 band
+            co2Label.text = String(format: "%0.03f kg", calcCo2Emission(route.distance, emissionForBand(route.co2band)!))
         }
-        
         
         return cell
     }
