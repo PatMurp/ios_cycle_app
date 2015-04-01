@@ -10,11 +10,6 @@ import UIKit
 
 class RoutesViewController: UITableViewController {
     
-    @IBAction func cancelToRoutesViewController(segue:UIStoryboardSegue) {
-    }
-    @IBAction func saveRouteDetail(segue:UIStoryboardSegue) {
-    }
-    
     // Load hardcoaded data
     var routes: [Route] = routesData
 
@@ -74,7 +69,24 @@ class RoutesViewController: UITableViewController {
         
         return cell
     }
-
+    
+    @IBAction func cancelToRoutesViewController(segue:UIStoryboardSegue) {
+    }
+    @IBAction func saveRouteDetail(segue:UIStoryboardSegue) {
+        let routeDetailsViewController = segue.sourceViewController as RoutesDetailViewController
+        
+        // add new route to routes array
+        routes.append(routeDetailsViewController.route)
+        
+        // update the tableView
+        let indexPath = NSIndexPath(forRow: routes.count-1, inSection: 0)
+        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        // hide the detail
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

@@ -47,3 +47,9 @@ func emissionForBand(band:String) -> Double? {
         return 0.0
     }
 }
+
+// convert string to double
+func stringToDouble(value:String) -> Double {
+    var doubleValue = (value as NSString).doubleValue
+    return doubleValue
+}

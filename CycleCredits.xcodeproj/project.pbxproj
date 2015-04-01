@@ -10,6 +10,7 @@
 		C507EF4B1AADF30700AE8D85 /* new_route.png in Resources */ = {isa = PBXBuildFile; fileRef = C507EF4A1AADF30700AE8D85 /* new_route.png */; };
 		C507EF4F1AAE02EC00AE8D85 /* CarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */; };
 		C56F3EAD1ACBF9E7007556A3 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */; };
+		C56F3EB71ACC3F71007556A3 /* RoutesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */; };
 		C57664E81AC704BD00179F6A /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57664E71AC704BD00179F6A /* Calc.swift */; };
 		C5AE59C81AA4A6F700DAB6B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59C71AA4A6F700DAB6B6 /* AppDelegate.swift */; };
 		C5AE59CB1AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59C91AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld */; };
@@ -38,6 +39,7 @@
 		C507EF4A1AADF30700AE8D85 /* new_route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_route.png; sourceTree = "<group>"; };
 		C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPickerViewController.swift; sourceTree = "<group>"; };
 		C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesDetailViewController.swift; sourceTree = "<group>"; };
 		C57664E71AC704BD00179F6A /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calc.swift; path = ../Calc.swift; sourceTree = "<group>"; };
 		C5AE59C21AA4A6F700DAB6B6 /* CycleCredits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleCredits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AE59C61AA4A6F700DAB6B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				C57664E71AC704BD00179F6A /* Calc.swift */,
 				C5C10FF51AC6EC470077ABCC /* gitignore */,
 				C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */,
+				C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */,
 			);
 			path = CycleCredits;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				C5AE59CD1AA4A6F700DAB6B6 /* ViewController.swift in Sources */,
 				C5AE59EF1AA4B5E400DAB6B6 /* SampleData.swift in Sources */,
 				C5AE59C81AA4A6F700DAB6B6 /* AppDelegate.swift in Sources */,
+				C56F3EB71ACC3F71007556A3 /* RoutesDetailViewController.swift in Sources */,
 				C507EF4F1AAE02EC00AE8D85 /* CarPickerViewController.swift in Sources */,
 				C56F3EAD1ACBF9E7007556A3 /* RouteCell.swift in Sources */,
 				C5AE59EB1AA4ADDF00DAB6B6 /* RoutesViewController.swift in Sources */,

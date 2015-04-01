@@ -57,7 +57,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VKs-Xc-zbm">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="vuz-VZ-beX" kind="modal" id="Gha-4U-IVa"/>
+                                <segue destination="wNT-5C-vxu" kind="modal" id="je4-G0-WZb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -65,6 +65,116 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E59-lw-t1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="806" y="435"/>
+        </scene>
+        <!--Add Route-->
+        <scene sceneID="kMJ-Si-6IZ">
+            <objects>
+                <tableViewController id="Ork-lT-GSB" customClass="RoutesDetailViewController" customModule="CycleCredits" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ZLq-QH-7vF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Route Date" id="7ke-Io-nXh">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ovv-pe-BYq">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ovv-pe-BYq" id="bLy-0i-eTS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" id="gAe-um-rKx">
+                                                    <rect key="frame" x="8" y="5" width="304" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Route Distance" id="1hv-b3-AmJ">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FtG-w2-S4g">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FtG-w2-S4g" id="nUa-qc-bLw">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" id="S2s-8R-x7F">
+                                                    <rect key="frame" x="8" y="5" width="304" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Co2 Band" id="Ykb-oa-1AT">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yoF-VN-6CW">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yoF-VN-6CW" id="JbN-Ne-q2E">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="bea-5s-XIb">
+                                                    <rect key="frame" x="8" y="13" width="304" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Ork-lT-GSB" id="IlM-Ij-aPQ"/>
+                            <outlet property="delegate" destination="Ork-lT-GSB" id="bKm-gF-I8o"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Route" id="HBH-MC-Ilp">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="lsp-Li-wmd">
+                            <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="V4d-dr-3NW" kind="unwind" identifier="CancelRouteDetail" unwindAction="cancelToRoutesViewController:" id="a40-z2-iUl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Im2-Qw-yLb">
+                            <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="V4d-dr-3NW" kind="unwind" identifier="SaveRouteDetail" unwindAction="saveRouteDetail:" id="hQs-Xb-vd0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="co2Band" destination="bea-5s-XIb" id="Kh7-rg-Agy"/>
+                        <outlet property="routeDate" destination="gAe-um-rKx" id="bP4-Pq-awE"/>
+                        <outlet property="routeDistance" destination="S2s-8R-x7F" id="MeG-pf-OTL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoz-Iu-eor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="V4d-dr-3NW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="440"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="djh-pX-eD3">
+            <objects>
+                <navigationController id="wNT-5C-vxu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lqx-zf-T4k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ork-lT-GSB" kind="relationship" relationship="rootViewController" id="pcz-8f-Ogo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Blk-zc-Oxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1243" y="440"/>
         </scene>
         <!--Choose Car Band-->
         <scene sceneID="Kla-z8-OsJ">
