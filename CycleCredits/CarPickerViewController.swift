@@ -17,17 +17,17 @@ class CarPickerViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         carCo2Bands = [
-            "A1 €170",
-            "A2 €180",
-            "A3 €190",
-            "A4 €200",
-            "B1 €270",
-            "B2 €280",
-            "C  €390",
-            "D  €570",
-            "E  €750",
-            "F  €1,200",
-            "G  €2,350"
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "B1",
+            "B2",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
         ]
 
         // Uncomment the following line to preserve selection between presentations
