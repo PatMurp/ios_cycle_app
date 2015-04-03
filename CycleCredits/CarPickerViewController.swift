@@ -29,6 +29,10 @@ class CarPickerViewController: UITableViewController {
             "F",
             "G"
         ]
+        
+        if let co2Band = selectedCarBand {
+            selectedCarBandIndex = find(carCo2Bands, co2Band)!
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -84,6 +88,18 @@ class CarPickerViewController: UITableViewController {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.accessoryType = .Checkmark
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SaveSelectedCo2Band" {
+            let cell = sender as UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            selectedCarBandIndex = indexPath?.row
+            
+            if let index = selectedCarBandIndex {
+                selectedCarBand = carCo2Bands[index]
+            }
+        }
     }
 
 
