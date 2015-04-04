@@ -23,6 +23,8 @@
 		C5AE59ED1AA4AF3F00DAB6B6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */; };
 		C5AE59EF1AA4B5E400DAB6B6 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */; };
 		C5C10FF61AC6EC480077ABCC /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C5C10FF51AC6EC470077ABCC /* gitignore */; };
+		C5F654421ACFE5AC0037A001 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F654411ACFE5AC0037A001 /* HelpViewController.swift */; };
+		C5F654471ACFE9F50037A001 /* tax_disk.png in Resources */ = {isa = PBXBuildFile; fileRef = C5F654461ACFE9F50037A001 /* tax_disk.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		C5C10FF51AC6EC470077ABCC /* gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore; sourceTree = "<group>"; };
+		C5F654411ACFE5AC0037A001 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		C5F654461ACFE9F50037A001 /* tax_disk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tax_disk.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		C507EF491AADF30700AE8D85 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C5F654461ACFE9F50037A001 /* tax_disk.png */,
 				C507EF4A1AADF30700AE8D85 /* new_route.png */,
 			);
 			path = images;
@@ -121,6 +126,7 @@
 				C5C10FF51AC6EC470077ABCC /* gitignore */,
 				C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */,
 				C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */,
+				C5F654411ACFE5AC0037A001 /* HelpViewController.swift */,
 			);
 			path = CycleCredits;
 			sourceTree = "<group>";
@@ -230,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F654471ACFE9F50037A001 /* tax_disk.png in Resources */,
 				C507EF4B1AADF30700AE8D85 /* new_route.png in Resources */,
 				C5AE59D01AA4A6F700DAB6B6 /* Main.storyboard in Resources */,
 				C5AE59D51AA4A6F700DAB6B6 /* LaunchScreen.xib in Resources */,
@@ -252,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F654421ACFE5AC0037A001 /* HelpViewController.swift in Sources */,
 				C57664E81AC704BD00179F6A /* Calc.swift in Sources */,
 				C5AE59CD1AA4A6F700DAB6B6 /* ViewController.swift in Sources */,
 				C5AE59EF1AA4B5E400DAB6B6 /* SampleData.swift in Sources */,
