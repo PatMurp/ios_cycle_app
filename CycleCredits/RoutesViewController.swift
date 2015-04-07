@@ -65,7 +65,7 @@ class RoutesViewController: UITableViewController {
         cell.dateLabel.text = route.date
         cell.distanceLabel.text = String(format: "%0.02f km", route.distance)
         // calculate saved co2 emissions of route
-        cell.emissionLabel.text = String(format: "%0.03f kg", calcCo2Emission(route.distance, emissionForBand(route.co2band)!))
+        cell.emissionLabel.text = String(format: "%0.03f kg Co2", calcCo2Emission(route.distance, emissionForBand(route.co2band)!))
         
         return cell
     }
@@ -73,15 +73,26 @@ class RoutesViewController: UITableViewController {
     @IBAction func cancelToRoutesViewController(segue:UIStoryboardSegue) {
     }
     @IBAction func saveRouteDetail(segue:UIStoryboardSegue) {
+        
         let routeDetailsViewController = segue.sourceViewController as RoutesDetailViewController
         
-        // add new route to routes array
-        routes.append(routeDetailsViewController.route)
-        
-        // update the tableView
-        let indexPath = NSIndexPath(forRow: routes.count-1, inSection: 0)
-        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        
+        if let routeToEdit = routeDetailsViewController.routeToEdit {
+            // get index of routeToEdit
+            let routeEditIndex = find(routes, routeToEdit)!
+            
+            // get indexPath of routeToEdit in tableView
+            let indexPath = NSIndexPath(forRow: routeEditIndex, inSection: 0)
+            
+            // reload that individual row
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        } else {
+            // add new route to routes array
+            routes.append(routeDetailsViewController.route)
+            
+            // update the tableView
+            let indexPath = NSIndexPath(forRow: routes.count-1, inSection: 0)
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
         // hide the detail
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -122,14 +133,24 @@ class RoutesViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // prepare for editing route
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "EditRoute" {
+            let navigationController = segue.destinationViewController as UINavigationController
+            let routeDetailsViewController =  navigationController.viewControllers[0] as RoutesDetailViewController
+            
+            let cell = sender as UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let selectedRouteIndex = indexPath?.row
+            
+            if let index = selectedRouteIndex {
+                let route = routes[index]
+                routeDetailsViewController.routeToEdit = route
+            }
+        }
     }
-    */
+
 
 }

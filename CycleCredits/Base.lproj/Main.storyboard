@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RouteCell" rowHeight="81" id="2k6-HB-h1R" customClass="RouteCell" customModule="CycleCredits" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="RouteCell" rowHeight="81" id="2k6-HB-h1R" customClass="RouteCell" customModule="CycleCredits" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2k6-HB-h1R" id="tSp-9H-Ebf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -25,18 +25,18 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emissions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ghB-3w-jpQ">
-                                            <rect key="frame" x="175" y="43" width="78" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="esJ-cS-tdm">
                                             <rect key="frame" x="20" y="43" width="67" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emissions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ghB-3w-jpQ">
+                                            <rect key="frame" x="124" y="43" width="133" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -45,6 +45,7 @@
                                     <outlet property="dateLabel" destination="HD0-79-7N9" id="D3M-Be-o5n"/>
                                     <outlet property="distanceLabel" destination="esJ-cS-tdm" id="zCF-HX-vUP"/>
                                     <outlet property="emissionLabel" destination="ghB-3w-jpQ" id="rph-yy-yYw"/>
+                                    <segue destination="wNT-5C-vxu" kind="modal" identifier="EditRoute" id="NiD-MH-v0j"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -57,7 +58,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VKs-Xc-zbm">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="wNT-5C-vxu" kind="modal" id="je4-G0-WZb"/>
+                                <segue destination="wNT-5C-vxu" kind="modal" identifier="AddRoute" id="je4-G0-WZb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -392,4 +393,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="NiD-MH-v0j"/>
+    </inferredMetricsTieBreakers>
 </document>

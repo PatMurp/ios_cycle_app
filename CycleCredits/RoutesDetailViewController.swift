@@ -13,34 +13,43 @@ class RoutesDetailViewController: UITableViewController {
     var route:Route!
     var co2Band:String = "C"
     
+    var routeToEdit:Route?
+    
     @IBOutlet weak var routeDate: UITextField!
     @IBOutlet weak var routeDistance: UITextField!
     @IBOutlet weak var bandLabel: UILabel!
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if(routeToEdit != nil) {
+            self.title = "Edit Route"
+            routeDate.text = routeToEdit!.date
+            routeDistance.text = String(format: "%0.02f",routeToEdit!.distance)
+            co2Band = routeToEdit!.co2band
+        }
+        else {
+            co2Band = "C"
+        }
+        bandLabel.text = co2Band
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveRouteDetail" {
-            var distance = self
-            route = Route(date: self.routeDate.text, distance: stringToDouble(self.routeDistance.text), co2band: co2Band)
+            if (self.routeToEdit != nil){
+                self.routeToEdit?.date = self.routeDate.text
+                self.routeToEdit?.distance = stringToDouble(self.routeDistance.text)
+                self.routeToEdit?.co2band = co2Band
+            }
+            else{
+                route = Route(date: self.routeDate.text, distance: stringToDouble(self.routeDistance.text), co2band: co2Band)
+            }
         }
-        
         if segue.identifier == "PickBand" {
-            let co2BandPickerViewController = segue.destinationViewController as
-            CarPickerViewController
-            co2BandPickerViewController.selectedCarBand = co2Band
+            let co2PickerViewController = segue.destinationViewController as CarPickerViewController
+            co2PickerViewController.selectedCarBand = co2Band
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        bandLabel.text = co2Band
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {

@@ -53,3 +53,4 @@ func stringToDouble(value:String) -> Double {
     var doubleValue = (value as NSString).doubleValue
     return doubleValue
 }
+
