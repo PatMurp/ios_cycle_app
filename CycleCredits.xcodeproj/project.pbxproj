@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		C507EF4B1AADF30700AE8D85 /* new_route.png in Resources */ = {isa = PBXBuildFile; fileRef = C507EF4A1AADF30700AE8D85 /* new_route.png */; };
 		C507EF4F1AAE02EC00AE8D85 /* CarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */; };
+		C53528311AD3ECA200BE457B /* carbon_footprint@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C535282E1AD3ECA200BE457B /* carbon_footprint@1x.png */; };
+		C53528321AD3ECA200BE457B /* carbon_footprint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C535282F1AD3ECA200BE457B /* carbon_footprint@2x.png */; };
+		C53528331AD3ECA200BE457B /* carbon_footprint@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53528301AD3ECA200BE457B /* carbon_footprint@3x.png */; };
+		C53528391AD3F13600BE457B /* location_@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53528361AD3F13600BE457B /* location_@1x.png */; };
+		C535283A1AD3F13600BE457B /* location_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53528371AD3F13600BE457B /* location_@2x.png */; };
+		C535283B1AD3F13600BE457B /* location_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53528381AD3F13600BE457B /* location_@3x.png */; };
 		C56F3EAD1ACBF9E7007556A3 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */; };
 		C56F3EB71ACC3F71007556A3 /* RoutesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */; };
 		C57664E81AC704BD00179F6A /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57664E71AC704BD00179F6A /* Calc.swift */; };
@@ -40,6 +46,12 @@
 /* Begin PBXFileReference section */
 		C507EF4A1AADF30700AE8D85 /* new_route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_route.png; sourceTree = "<group>"; };
 		C507EF4E1AAE02EC00AE8D85 /* CarPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPickerViewController.swift; sourceTree = "<group>"; };
+		C535282E1AD3ECA200BE457B /* carbon_footprint@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carbon_footprint@1x.png"; sourceTree = "<group>"; };
+		C535282F1AD3ECA200BE457B /* carbon_footprint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carbon_footprint@2x.png"; sourceTree = "<group>"; };
+		C53528301AD3ECA200BE457B /* carbon_footprint@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carbon_footprint@3x.png"; sourceTree = "<group>"; };
+		C53528361AD3F13600BE457B /* location_@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_@1x.png"; sourceTree = "<group>"; };
+		C53528371AD3F13600BE457B /* location_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_@2x.png"; sourceTree = "<group>"; };
+		C53528381AD3F13600BE457B /* location_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_@3x.png"; sourceTree = "<group>"; };
 		C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesDetailViewController.swift; sourceTree = "<group>"; };
 		C57664E71AC704BD00179F6A /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calc.swift; path = ../Calc.swift; sourceTree = "<group>"; };
@@ -85,6 +97,12 @@
 			children = (
 				C5F654461ACFE9F50037A001 /* tax_disk.png */,
 				C507EF4A1AADF30700AE8D85 /* new_route.png */,
+				C535282E1AD3ECA200BE457B /* carbon_footprint@1x.png */,
+				C535282F1AD3ECA200BE457B /* carbon_footprint@2x.png */,
+				C53528301AD3ECA200BE457B /* carbon_footprint@3x.png */,
+				C53528361AD3F13600BE457B /* location_@1x.png */,
+				C53528371AD3F13600BE457B /* location_@2x.png */,
+				C53528381AD3F13600BE457B /* location_@3x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -237,10 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F654471ACFE9F50037A001 /* tax_disk.png in Resources */,
+				C53528311AD3ECA200BE457B /* carbon_footprint@1x.png in Resources */,
 				C507EF4B1AADF30700AE8D85 /* new_route.png in Resources */,
 				C5AE59D01AA4A6F700DAB6B6 /* Main.storyboard in Resources */,
 				C5AE59D51AA4A6F700DAB6B6 /* LaunchScreen.xib in Resources */,
+				C53528321AD3ECA200BE457B /* carbon_footprint@2x.png in Resources */,
 				C5AE59D21AA4A6F700DAB6B6 /* Images.xcassets in Resources */,
+				C535283A1AD3F13600BE457B /* location_@2x.png in Resources */,
+				C53528331AD3ECA200BE457B /* carbon_footprint@3x.png in Resources */,
+				C53528391AD3F13600BE457B /* location_@1x.png in Resources */,
+				C535283B1AD3F13600BE457B /* location_@3x.png in Resources */,
 				C5C10FF61AC6EC480077ABCC /* gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -55,7 +55,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Routes" id="AtD-cR-2ST">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VKs-Xc-zbm">
+                        <barButtonItem key="leftBarButtonItem" image="carbon_footprint.png" style="plain" id="UDU-H6-J6B">
+                            <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="7he-ii-NCg" kind="push" id="vBp-6e-O17"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="location_.png" id="VKs-Xc-zbm">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="wNT-5C-vxu" kind="modal" identifier="AddRoute" id="je4-G0-WZb"/>
@@ -66,6 +72,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E59-lw-t1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="806" y="435"/>
+        </scene>
+        <!--Co2 Savings-->
+        <scene sceneID="1Z3-5Y-yVq">
+            <objects>
+                <viewController id="7he-ii-NCg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bby-Id-JCq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Co2 Savings" id="zmy-lk-wHd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Dl-c2-dkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="1169"/>
         </scene>
         <!--Add Route-->
         <scene sceneID="kMJ-Si-6IZ">
@@ -418,6 +439,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="carbon_footprint.png" width="22" height="22"/>
+        <image name="location_.png" width="20" height="20"/>
         <image name="tax_disk.png" width="200" height="177"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -426,6 +449,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NiD-MH-v0j"/>
+        <segue reference="je4-G0-WZb"/>
     </inferredMetricsTieBreakers>
 </document>
