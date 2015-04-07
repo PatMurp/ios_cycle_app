@@ -139,6 +139,37 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="" id="2Sk-TB-FYX">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="v0B-QQ-qLQ">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v0B-QQ-qLQ" id="pZo-Jx-59a">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="osU-K1-Ob4">
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.98823535439999999" green="0.082352943720000002" blue="0.10588236149999999" alpha="1" colorSpace="deviceRGB"/>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rLi-kM-Y7p">
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.98823535439999999" green="0.082352943720000002" blue="0.10588236149999999" alpha="1" colorSpace="deviceRGB"/>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="V4d-dr-3NW" kind="unwind" unwindAction="deleteRoute:" id="usr-Uw-fiD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="Ork-lT-GSB" id="IlM-Ij-aPQ"/>
@@ -161,6 +192,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bandLabel" destination="jGM-Lx-vMx" id="Sfk-5D-2Hi"/>
+                        <outlet property="deleteButtonCell" destination="osU-K1-Ob4" id="kSG-Sk-6mh"/>
                         <outlet property="routeDate" destination="gAe-um-rKx" id="bP4-Pq-awE"/>
                         <outlet property="routeDistance" destination="S2s-8R-x7F" id="MeG-pf-OTL"/>
                     </connections>

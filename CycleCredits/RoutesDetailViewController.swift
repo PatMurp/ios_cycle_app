@@ -19,6 +19,7 @@ class RoutesDetailViewController: UITableViewController {
     @IBOutlet weak var routeDistance: UITextField!
     @IBOutlet weak var bandLabel: UILabel!
     
+    @IBOutlet weak var deleteButtonCell: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class RoutesDetailViewController: UITableViewController {
         }
         else {
             co2Band = "C"
+            deleteButtonCell.hidden = true
         }
         bandLabel.text = co2Band
     }

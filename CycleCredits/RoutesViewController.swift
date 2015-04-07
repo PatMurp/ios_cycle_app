@@ -151,6 +151,26 @@ class RoutesViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func deleteRoute(segue:UIStoryboardSegue) {
+        let routeDetailsViewController = segue.sourceViewController as RoutesDetailViewController
+        
+        if let routeToEdit = routeDetailsViewController.routeToEdit {
+            // get index of routeToEdit in routes array
+            let routeToEditIndex = find(routes, routeToEdit)!
+            
+            // get indexPath of routeToEdit in tableView
+            let indexPath = NSIndexPath(forRow: routeToEditIndex, inSection: 0)
+            
+            // delete route from array
+            routes.removeAtIndex(routeToEditIndex)
+            
+            // delete individual row
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation:UITableViewRowAnimation.Fade)
+        }
+        // hide the detail view controller
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
 
 }
