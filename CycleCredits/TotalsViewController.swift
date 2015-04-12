@@ -17,6 +17,13 @@ class TotalsViewController: UIViewController {
     @IBOutlet weak var ccValueSlider: UISlider!
     @IBOutlet weak var ccValue: UILabel!
     
+   
+    
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        
+        var currentValue = sender.value
+        ccValue.text = "\(currentValue)"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
