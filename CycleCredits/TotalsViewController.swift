@@ -10,6 +10,7 @@ import UIKit
 
 class TotalsViewController: UIViewController {
     
+    var valueCc: Double = 7
     
     @IBOutlet weak var tdistance: UITextField!
     @IBOutlet weak var tco2Savings: UITextField!
@@ -33,6 +34,7 @@ class TotalsViewController: UIViewController {
         
         tdistance.text = String(format: "%0.02f km", tempDistance)
         tco2Savings.text = String(format: "%0.03f kg", tempco2Savings)
+        tValue.text = String(format: "€%0.02f", calcCo2Value(tempco2Savings, valueCc))
     }
 
     override func didReceiveMemoryWarning() {

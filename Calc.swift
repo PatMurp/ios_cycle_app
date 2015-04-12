@@ -54,3 +54,11 @@ func stringToDouble(value:String) -> Double {
     return doubleValue
 }
 
+// calculate total saved carbon dioxide value
+func calcCo2Value(co2Total: Double, value: Double) -> Double {
+    var result = 0.0
+    var tonnesCo2 = co2Total / 1000
+    result = tonnesCo2 * value
+    
+    return result
+}
