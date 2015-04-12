@@ -21,13 +21,14 @@ class TotalsViewController: UIViewController {
     
     @IBAction func sliderValueChanged(sender: UISlider) {
         
-        var currentValue = sender.value
-        ccValue.text = "\(currentValue)"
+        var currentValue = lroundf(sender.value)
+        ccValue.text = "\(currentValue)/tonne"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
