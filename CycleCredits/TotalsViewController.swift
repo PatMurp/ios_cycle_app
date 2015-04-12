@@ -22,11 +22,12 @@ class TotalsViewController: UIViewController {
     var tempDistance = 23.4
     var tempco2Savings = 2.3
    
-    
+    // set carbon credit value and total value when slider is moved
     @IBAction func sliderValueChanged(sender: UISlider) {
         
         var currentValue = lroundf(sender.value)
         ccValue.text = "\(currentValue)/tonne"
+        tValue.text = String(format: "€%0.02f", calcCo2Value(tempco2Savings, Double(currentValue)))
     }
     
     override func viewDidLoad() {
