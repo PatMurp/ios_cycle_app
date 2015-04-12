@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TotalsViewController.swift
 //  CycleCredits
 //
 //  Created by Patrick Murphy on 02/03/2015.
@@ -8,8 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class TotalsViewController: UIViewController {
+    
+    
+    @IBOutlet weak var tdistance: UITextField!
+    @IBOutlet weak var tco2Savings: UITextField!
+    @IBOutlet weak var tValue: UITextField!
+    @IBOutlet weak var ccValueSlider: UISlider!
+    @IBOutlet weak var ccValue: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
