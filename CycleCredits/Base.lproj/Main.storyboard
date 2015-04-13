@@ -55,7 +55,12 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem image="location_.png" id="Okf-Qx-vkw"/>
+                        <barButtonItem image="location_.png" id="Okf-Qx-vkw">
+                            <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="dAY-7I-gbq" kind="modal" identifier="MapRoute" id="TM6-Bw-LRf"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Routes" id="AtD-cR-2ST">
                         <barButtonItem key="leftBarButtonItem" image="carbon_footprint.png" style="plain" id="UDU-H6-J6B">
@@ -64,7 +69,7 @@
                                 <segue destination="7he-ii-NCg" kind="push" id="vBp-6e-O17"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="location_.png" id="VKs-Xc-zbm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VKs-Xc-zbm">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="wNT-5C-vxu" kind="modal" identifier="AddRoute" id="je4-G0-WZb"/>
@@ -75,6 +80,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E59-lw-t1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="806" y="435"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="4Ye-NJ-aMk">
+            <objects>
+                <viewController id="dAY-7I-gbq" customClass="MapViewController" customModule="CycleCredits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b8q-ff-z3e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="60z-wx-sls">
+                                <rect key="frame" x="-5" y="20" width="325" height="381"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="E7D-nS-MQd">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Home" id="cba-fg-ACh">
+                                        <connections>
+                                            <segue destination="NT5-xn-VBo" kind="unwind" unwindAction="cancelToRoutesViewController:" id="XXP-Il-OHG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0aH-SA-KEr"/>
+                    <connections>
+                        <outlet property="mapView" destination="60z-wx-sls" id="5kK-bF-hh5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0X-OP-86J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NT5-xn-VBo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="1153"/>
         </scene>
         <!--CO2 Savings-->
         <scene sceneID="1Z3-5Y-yVq">
@@ -156,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Dl-c2-dkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="1169"/>
+            <point key="canvasLocation" x="1009" y="1153"/>
         </scene>
         <!--Add Route-->
         <scene sceneID="kMJ-Si-6IZ">

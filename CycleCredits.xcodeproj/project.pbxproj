@@ -29,6 +29,7 @@
 		C5AE59ED1AA4AF3F00DAB6B6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */; };
 		C5AE59EF1AA4B5E400DAB6B6 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */; };
 		C5C10FF61AC6EC480077ABCC /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C5C10FF51AC6EC470077ABCC /* gitignore */; };
+		C5DF95B41ADC0648003600B1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DF95B31ADC0648003600B1 /* MapViewController.swift */; };
 		C5F654421ACFE5AC0037A001 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F654411ACFE5AC0037A001 /* HelpViewController.swift */; };
 		C5F654471ACFE9F50037A001 /* tax_disk.png in Resources */ = {isa = PBXBuildFile; fileRef = C5F654461ACFE9F50037A001 /* tax_disk.png */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		C5AE59EC1AA4AF3F00DAB6B6 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C5AE59EE1AA4B5E400DAB6B6 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		C5C10FF51AC6EC470077ABCC /* gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore; sourceTree = "<group>"; };
+		C5DF95B31ADC0648003600B1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C5F654411ACFE5AC0037A001 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		C5F654461ACFE9F50037A001 /* tax_disk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tax_disk.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 				C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */,
 				C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */,
 				C5F654411ACFE5AC0037A001 /* HelpViewController.swift */,
+				C5DF95B31ADC0648003600B1 /* MapViewController.swift */,
 			);
 			path = CycleCredits;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				C5AE59C81AA4A6F700DAB6B6 /* AppDelegate.swift in Sources */,
 				C56F3EB71ACC3F71007556A3 /* RoutesDetailViewController.swift in Sources */,
 				C507EF4F1AAE02EC00AE8D85 /* CarPickerViewController.swift in Sources */,
+				C5DF95B41ADC0648003600B1 /* MapViewController.swift in Sources */,
 				C56F3EAD1ACBF9E7007556A3 /* RouteCell.swift in Sources */,
 				C5AE59EB1AA4ADDF00DAB6B6 /* RoutesViewController.swift in Sources */,
 				C5AE59ED1AA4AF3F00DAB6B6 /* Route.swift in Sources */,
