@@ -36,5 +36,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location is required to be able to track your routes.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location is required to be able to track your routes</string>
 </dict>
 </plist>

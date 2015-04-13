@@ -8,48 +8,39 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var trackButton: UIButton!
+    
+    var locationManager: CLLocationManager!
+    var totalDistance: Double = 0
+    var isUserTracking: Bool = false
+    var oldLocation: CLLocation?
+    
+    
+    @IBAction func trackButtonPressed(sender: AnyObject) {
+        
+        if isUserTracking {
+            trackButton.setTitle("Track my route", forState: .Normal)
+            distanceLabel.text = "0.0 km"
+            isUserTracking = false
+        } else {
+            isUserTracking = true
+            trackButton.setTitle("Stop tracking and save", forState: .Normal)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // wit cordinates
-        var latitude:CLLocationDegrees = 52.245748
-        var longitude:CLLocationDegrees = -7.138378
-        
-        // zoom
-        var latDelta:CLLocationDegrees = 0.01
-        var lonDelta:CLLocationDegrees = 0.01
-        
-        // zooom area
-        var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-        
-        // location
-        var bikeStand:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        
-        // region display
-        var theRegion:MKCoordinateRegion = MKCoordinateRegionMake(bikeStand, theSpan)
-        
-        // display map
-        self.mapView.setRegion(theRegion, animated: true)
-        
-        // pin
-        var bikeStandLocation = MKPointAnnotation()
-        
-        // pin cordinates
-        bikeStandLocation.coordinate = bikeStand
-        
-        // title
-        bikeStandLocation.title = "WIT Bike Stand"
-        
-        // subtitle
-        bikeStandLocation.subtitle = "Journey starts here"
-        
-        // display info and pin
-        self.mapView.addAnnotation(bikeStandLocation)
+        createLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +48,41 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // notify if user moves
+    func createLocationManager() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.activityType = .Fitness
+    }
+    
+    func updateDistanceLabel() {
+        distanceLabel.text = NSString(format: "%.2f km", totalDistance/1000)
+    }
+    
+    // location tracking
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        if let firstLocation = locations.first as? CLLocation
+        {
+            mapView.setCenterCoordinate(firstLocation.coordinate, animated: true)
+            
+            let region = MKCoordinateRegionMakeWithDistance(firstLocation.coordinate, 1000, 1000)
+            mapView.setRegion(region, animated: true)
+            
+            if isUserTracking
+            {
+                if let oldLocation = oldLocation
+                {
+                    let delta: CLLocationDistance = firstLocation.distanceFromLocation(oldLocation)
+                    totalDistance += delta
+                    updateDistanceLabel()
+                }
+            }
+            
+            oldLocation = firstLocation
+        }
+    }
 
     /*
     // MARK: - Navigation
