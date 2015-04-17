@@ -35,6 +35,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             trackButton.backgroundColor = UIColor.redColor()
             trackButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             trackButton.setTitle("Stop tracking", forState: .Normal)
+            
+            // alert for debugging
+            var alertString = "Route values "
+            alertString += NSString(format: "%.3f km", totalDistance/1000) + " "
+            alertString += getCurrentDateToString()
+            
+            let myAlert = UIAlertController(title: alertString,  message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // add ok button
+            myAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            // show alert
+            self.presentViewController(myAlert, animated: false, completion: nil)
         }
     }
     
@@ -91,7 +104,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             oldLocation = firstLocation
         }
     }
-
+    
+    // get current date and convert to string
+    func getCurrentDateToString() -> String{
+        let date = NSDate()
+        // format date
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MMM-yy"
+        var dateString = dateFormatter.stringFromDate(date)
+        return dateString
+    }
     /*
     // MARK: - Navigation
 
