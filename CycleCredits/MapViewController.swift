@@ -25,12 +25,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func trackButtonPressed(sender: AnyObject) {
         
         if isUserTracking {
-            trackButton.setTitle("Track my route", forState: .Normal)
+            trackButton.backgroundColor = UIColor.greenColor()
+            trackButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+            trackButton.setTitle("Track route", forState: .Normal)
             distanceLabel.text = "0.0 km"
             isUserTracking = false
         } else {
             isUserTracking = true
-            trackButton.setTitle("Stop tracking and save", forState: .Normal)
+            trackButton.backgroundColor = UIColor.redColor()
+            trackButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+            trackButton.setTitle("Stop tracking", forState: .Normal)
         }
     }
     
@@ -41,6 +45,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
+        
+        // set button background and text colors
+        trackButton.backgroundColor = UIColor.greenColor()
+        trackButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
     }
 
     override func didReceiveMemoryWarning() {
