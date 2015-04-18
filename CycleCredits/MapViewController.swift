@@ -14,15 +14,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var distanceLabel: UILabel!
+   
     @IBOutlet weak var trackButton: UIButton!
+   
     
     var locationManager: CLLocationManager!
     var totalDistance: Double = 0
     var isUserTracking: Bool = false
     var oldLocation: CLLocation?
+    var co2Band:String = "C" // hardcoded value
     
-    
-    @IBAction func trackButtonPressed(sender: AnyObject) {
+  
+    @IBAction func trackButtonPressed(sender: UIButton) {
         
         if isUserTracking {
             trackButton.backgroundColor = UIColor.greenColor()
@@ -39,7 +42,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             // alert for debugging
             var alertString = "Route values "
             alertString += NSString(format: "%.3f km", totalDistance/1000) + " "
-            alertString += getCurrentDateToString()
+            alertString += getCurrentDateToString() + " "
+            alertString += co2Band
             
             let myAlert = UIAlertController(title: alertString,  message: nil, preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -50,7 +54,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             self.presentViewController(myAlert, animated: false, completion: nil)
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +82,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func updateDistanceLabel() {
-        distanceLabel.text = NSString(format: "%.2f km", totalDistance/1000)
+        distanceLabel.text = String(format: "%.2f km", totalDistance/1000)
     }
     
     // location tracking
