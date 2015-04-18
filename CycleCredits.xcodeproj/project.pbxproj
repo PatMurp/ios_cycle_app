@@ -18,6 +18,9 @@
 		C56F3EAD1ACBF9E7007556A3 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */; };
 		C56F3EB71ACC3F71007556A3 /* RoutesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */; };
 		C57664E81AC704BD00179F6A /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57664E71AC704BD00179F6A /* Calc.swift */; };
+		C58F38E81AE25FA300718B95 /* home_@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F38E51AE25FA300718B95 /* home_@1x.png */; };
+		C58F38E91AE25FA300718B95 /* home_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F38E61AE25FA300718B95 /* home_@2x.png */; };
+		C58F38EA1AE25FA300718B95 /* home_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C58F38E71AE25FA300718B95 /* home_@3x.png */; };
 		C5AE59C81AA4A6F700DAB6B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59C71AA4A6F700DAB6B6 /* AppDelegate.swift */; };
 		C5AE59CB1AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59C91AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld */; };
 		C5AE59CD1AA4A6F700DAB6B6 /* TotalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE59CC1AA4A6F700DAB6B6 /* TotalsViewController.swift */; };
@@ -56,6 +59,9 @@
 		C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesDetailViewController.swift; sourceTree = "<group>"; };
 		C57664E71AC704BD00179F6A /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calc.swift; path = ../Calc.swift; sourceTree = "<group>"; };
+		C58F38E51AE25FA300718B95 /* home_@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_@1x.png"; sourceTree = "<group>"; };
+		C58F38E61AE25FA300718B95 /* home_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_@2x.png"; sourceTree = "<group>"; };
+		C58F38E71AE25FA300718B95 /* home_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_@3x.png"; sourceTree = "<group>"; };
 		C5AE59C21AA4A6F700DAB6B6 /* CycleCredits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleCredits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5AE59C61AA4A6F700DAB6B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5AE59C71AA4A6F700DAB6B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 		C507EF491AADF30700AE8D85 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C58F38E51AE25FA300718B95 /* home_@1x.png */,
+				C58F38E61AE25FA300718B95 /* home_@2x.png */,
+				C58F38E71AE25FA300718B95 /* home_@3x.png */,
 				C5F654461ACFE9F50037A001 /* tax_disk.png */,
 				C507EF4A1AADF30700AE8D85 /* new_route.png */,
 				C535282E1AD3ECA200BE457B /* carbon_footprint@1x.png */,
@@ -262,11 +271,14 @@
 				C507EF4B1AADF30700AE8D85 /* new_route.png in Resources */,
 				C5AE59D01AA4A6F700DAB6B6 /* Main.storyboard in Resources */,
 				C5AE59D51AA4A6F700DAB6B6 /* LaunchScreen.xib in Resources */,
+				C58F38E91AE25FA300718B95 /* home_@2x.png in Resources */,
 				C53528321AD3ECA200BE457B /* carbon_footprint@2x.png in Resources */,
 				C5AE59D21AA4A6F700DAB6B6 /* Images.xcassets in Resources */,
+				C58F38EA1AE25FA300718B95 /* home_@3x.png in Resources */,
 				C535283A1AD3F13600BE457B /* location_@2x.png in Resources */,
 				C53528331AD3ECA200BE457B /* carbon_footprint@3x.png in Resources */,
 				C53528391AD3F13600BE457B /* location_@1x.png in Resources */,
+				C58F38E81AE25FA300718B95 /* home_@1x.png in Resources */,
 				C535283B1AD3F13600BE457B /* location_@3x.png in Resources */,
 				C5C10FF61AC6EC480077ABCC /* gitignore in Resources */,
 			);
