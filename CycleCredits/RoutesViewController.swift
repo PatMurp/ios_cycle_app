@@ -72,6 +72,7 @@ class RoutesViewController: UITableViewController {
     
     @IBAction func cancelToRoutesViewController(segue:UIStoryboardSegue) {
     }
+    // add new route with form
     @IBAction func saveRouteDetail(segue:UIStoryboardSegue) {
         
         let routeDetailsViewController = segue.sourceViewController as RoutesDetailViewController
@@ -96,6 +97,23 @@ class RoutesViewController: UITableViewController {
         // hide the detail
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    // add new route using map tracking
+    @IBAction func saveMappedRouteDetail(segue:UIStoryboardSegue) {
+        
+        let mapViewController = segue.sourceViewController as MapViewController
+        
+        // add new route to routes array
+        routes.append(mapViewController.route)
+        
+        // update the tableView
+        let indexPath = NSIndexPath(forItem: routes.count-1, inSection: 0)
+        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        // hide detail view controller
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     
     /*

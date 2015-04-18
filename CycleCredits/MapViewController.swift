@@ -22,6 +22,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var totalDistance: Double = 0
     var isUserTracking: Bool = false
     var oldLocation: CLLocation?
+    
+    var route:Route!
     var co2Band:String = "C" // hardcoded value
     
   
@@ -38,20 +40,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             trackButton.backgroundColor = UIColor.redColor()
             trackButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             trackButton.setTitle("Stop tracking", forState: .Normal)
-            
-            // alert for debugging
-            var alertString = "Route values "
-            alertString += NSString(format: "%.3f km", totalDistance/1000) + " "
-            alertString += getCurrentDateToString() + " "
-            alertString += co2Band
-            
-            let myAlert = UIAlertController(title: alertString,  message: nil, preferredStyle: UIAlertControllerStyle.Alert)
-            
-            // add ok button
-            myAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            
-            // show alert
-            self.presentViewController(myAlert, animated: false, completion: nil)
         }
     }
     
@@ -105,6 +93,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             oldLocation = firstLocation
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SaveMappedRouteDetail" {
+            if (self.totalDistance != 0.0) {
+                route = Route(date: self.getCurrentDateToString(), distance: self.totalDistance/1000, co2band: co2Band)
+            } else {
+                // display alert if distance is 0
+                let distanceAlert = UIAlertController(title: "Distance value is 0", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+                
+                // add ok button
+               distanceAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                
+                // show alert
+                self.presentViewController(distanceAlert, animated: false, completion: nil)
+            }
         }
     }
     
