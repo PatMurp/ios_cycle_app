@@ -98,18 +98,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveMappedRouteDetail" {
-            if (self.totalDistance != 0.0) {
-                route = Route(date: self.getCurrentDateToString(), distance: self.totalDistance/1000, co2band: co2Band)
-            } else {
-                // display alert if distance is 0
-                let distanceAlert = UIAlertController(title: "Distance value is 0", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
-                
-                // add ok button
-               distanceAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                
-                // show alert
-                self.presentViewController(distanceAlert, animated: false, completion: nil)
-            }
+           
+            route = Route(date: self.getCurrentDateToString(), distance: self.totalDistance/1000, co2band: co2Band)
         }
     }
     

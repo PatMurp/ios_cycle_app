@@ -103,14 +103,26 @@ class RoutesViewController: UITableViewController {
         
         let mapViewController = segue.sourceViewController as MapViewController
         
-        // add new route to routes array
-        routes.append(mapViewController.route)
+        if (mapViewController.route.distance > 0) {
+            // add new route to routes array
+            routes.append(mapViewController.route)
+            
+            // update the tableView
+            let indexPath = NSIndexPath(forItem: routes.count-1, inSection: 0)
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        } else {
+            // display alert if distance is 0
+            let distanceAlert = UIAlertController(title: "Distance value is 0.0", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // add ok button
+            distanceAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            // show alert
+            self.presentViewController(distanceAlert, animated: false, completion: nil)
+        }
         
-        // update the tableView
-        let indexPath = NSIndexPath(forItem: routes.count-1, inSection: 0)
-        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         
-        // hide detail view controller
+        // hide map view controller
         dismissViewControllerAnimated(true, completion: nil)
     }
     
