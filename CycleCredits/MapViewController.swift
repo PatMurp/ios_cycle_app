@@ -17,6 +17,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
    
     @IBOutlet weak var trackButton: UIButton!
    
+    @IBOutlet weak var co2Label: UILabel!
     
     var locationManager: CLLocationManager!
     var totalDistance: Double = 0
@@ -24,7 +25,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var oldLocation: CLLocation?
     
     var route:Route!
-    var co2Band:String = "C" // hardcoded value
+    var co2Band:String = "C" // default value
     
   
     @IBAction func trackButtonPressed(sender: UIButton) {
@@ -45,6 +46,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        co2Label.text = co2Band
+        
         createLocationManager()
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
@@ -101,6 +104,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
            
             route = Route(date: self.getCurrentDateToString(), distance: self.totalDistance/1000, co2band: co2Band)
         }
+        
+        if segue.identifier == "PickBand" {
+            let co2PickerViewController = segue.destinationViewController as CarPickerViewController
+            co2PickerViewController.selectedCarBand = co2Band
+        }
     }
     
     // get current date and convert to string
@@ -112,14 +120,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         var dateString = dateFormatter.stringFromDate(date)
         return dateString
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func selectedBand(segue:UIStoryboardSegue) {
+        let carPickerViewController = segue.sourceViewController as
+        CarPickerViewController
+        if let selectedCarBand = carPickerViewController.selectedCarBand {
+            co2Label.text = selectedCarBand
+            co2Band = selectedCarBand
+        }
     }
-    */
 
 }
