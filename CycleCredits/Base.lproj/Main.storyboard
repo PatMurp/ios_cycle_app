@@ -246,27 +246,27 @@
                                 <exclude reference="LA6-Jj-EUM"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="F1L-ph-g4j"/>
-                                <exclude reference="JKX-kL-QSP"/>
-                                <exclude reference="Ttf-Bw-2NJ"/>
-                                <exclude reference="bJ3-ef-Q3f"/>
-                                <exclude reference="8jV-0f-lUh"/>
+                                <exclude reference="b1v-Fa-3xV"/>
+                                <exclude reference="j9d-S8-FMQ"/>
+                                <exclude reference="rVA-eW-w4i"/>
                                 <exclude reference="W0x-Jq-5U2"/>
                                 <exclude reference="ZPd-UU-h9y"/>
                                 <exclude reference="doz-TT-K7i"/>
                                 <exclude reference="rlL-6M-T7I"/>
-                                <exclude reference="7bN-O5-gQp"/>
-                                <exclude reference="Flg-BI-3iY"/>
-                                <exclude reference="b1v-Fa-3xV"/>
-                                <exclude reference="j9d-S8-FMQ"/>
-                                <exclude reference="rVA-eW-w4i"/>
+                                <exclude reference="ccx-uw-zKY"/>
                                 <exclude reference="BAC-d9-SKt"/>
                                 <exclude reference="Fse-sf-oC6"/>
                                 <exclude reference="Ydn-CH-hPm"/>
                                 <exclude reference="i34-Ee-sZr"/>
                                 <exclude reference="tko-zC-2rt"/>
+                                <exclude reference="F1L-ph-g4j"/>
+                                <exclude reference="JKX-kL-QSP"/>
+                                <exclude reference="Ttf-Bw-2NJ"/>
+                                <exclude reference="bJ3-ef-Q3f"/>
+                                <exclude reference="8jV-0f-lUh"/>
+                                <exclude reference="7bN-O5-gQp"/>
+                                <exclude reference="Flg-BI-3iY"/>
                                 <exclude reference="NJs-Is-4jt"/>
-                                <exclude reference="ccx-uw-zKY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -277,6 +277,19 @@
                                 <include reference="LA6-Jj-EUM"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="b1v-Fa-3xV"/>
+                                <include reference="j9d-S8-FMQ"/>
+                                <include reference="rVA-eW-w4i"/>
+                                <include reference="W0x-Jq-5U2"/>
+                                <include reference="ZPd-UU-h9y"/>
+                                <include reference="doz-TT-K7i"/>
+                                <include reference="rlL-6M-T7I"/>
+                                <include reference="ccx-uw-zKY"/>
+                                <include reference="BAC-d9-SKt"/>
+                                <include reference="Fse-sf-oC6"/>
+                                <include reference="Ydn-CH-hPm"/>
+                                <include reference="i34-Ee-sZr"/>
+                                <include reference="tko-zC-2rt"/>
                                 <include reference="F1L-ph-g4j"/>
                                 <include reference="JKX-kL-QSP"/>
                                 <include reference="Ttf-Bw-2NJ"/>
@@ -284,27 +297,14 @@
                                 <exclude reference="Wg3-X7-fyY"/>
                                 <include reference="bJ3-ef-Q3f"/>
                                 <exclude reference="bab-bG-OJy"/>
-                                <exclude reference="N8P-8N-4Rr"/>
-                                <exclude reference="hm7-bm-aWD"/>
                                 <include reference="8jV-0f-lUh"/>
-                                <include reference="W0x-Jq-5U2"/>
-                                <include reference="ZPd-UU-h9y"/>
-                                <include reference="doz-TT-K7i"/>
-                                <include reference="rlL-6M-T7I"/>
                                 <include reference="7bN-O5-gQp"/>
                                 <include reference="Flg-BI-3iY"/>
                                 <exclude reference="dZS-75-lhh"/>
                                 <exclude reference="tWK-Es-dfL"/>
-                                <include reference="b1v-Fa-3xV"/>
-                                <include reference="j9d-S8-FMQ"/>
-                                <include reference="rVA-eW-w4i"/>
-                                <include reference="BAC-d9-SKt"/>
-                                <include reference="Fse-sf-oC6"/>
-                                <include reference="Ydn-CH-hPm"/>
-                                <include reference="i34-Ee-sZr"/>
-                                <include reference="tko-zC-2rt"/>
+                                <exclude reference="N8P-8N-4Rr"/>
+                                <exclude reference="hm7-bm-aWD"/>
                                 <include reference="NJs-Is-4jt"/>
-                                <include reference="ccx-uw-zKY"/>
                             </mask>
                         </variation>
                     </view>
@@ -481,6 +481,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="editTextDate:" destination="Ork-lT-GSB" eventType="editingDidEnd" id="v5x-wk-CAs"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -604,18 +607,23 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="EdH-au-V0C"/>
+                                                    <exclude reference="MrB-bG-lmg"/>
+                                                    <exclude reference="ZeX-nS-vdt"/>
                                                     <exclude reference="FqB-9w-KUn"/>
                                                     <exclude reference="Tqb-Dk-RL7"/>
                                                     <exclude reference="bTD-5v-gXT"/>
                                                     <exclude reference="qHn-HQ-1zB"/>
                                                     <exclude reference="uAQ-it-C7q"/>
-                                                    <exclude reference="EdH-au-V0C"/>
-                                                    <exclude reference="MrB-bG-lmg"/>
-                                                    <exclude reference="ZeX-nS-vdt"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="constraints">
+                                                    <exclude reference="7yN-EM-Dte"/>
+                                                    <include reference="EdH-au-V0C"/>
+                                                    <include reference="MrB-bG-lmg"/>
+                                                    <exclude reference="Sf0-TF-s7T"/>
+                                                    <include reference="ZeX-nS-vdt"/>
                                                     <exclude reference="5hM-As-ZN1"/>
                                                     <exclude reference="C1w-4q-fsM"/>
                                                     <include reference="FqB-9w-KUn"/>
@@ -627,11 +635,6 @@
                                                     <exclude reference="h0y-kt-KlU"/>
                                                     <include reference="qHn-HQ-1zB"/>
                                                     <include reference="uAQ-it-C7q"/>
-                                                    <exclude reference="7yN-EM-Dte"/>
-                                                    <include reference="EdH-au-V0C"/>
-                                                    <include reference="MrB-bG-lmg"/>
-                                                    <exclude reference="Sf0-TF-s7T"/>
-                                                    <include reference="ZeX-nS-vdt"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -772,7 +775,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A1 €170" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-iI-1t2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A1 €170" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-iI-1t2">
                                 <rect key="frame" x="268" y="340" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="3Xn-Fp-RMN"/>
@@ -798,7 +801,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A1 €180" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Won-JM-l9i">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A1 €180" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Won-JM-l9i">
                                 <rect key="frame" x="268" y="363" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="F46-j2-dLy"/>
@@ -819,7 +822,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A3 €190" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-Ad-Ttu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A3 €190" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-Ad-Ttu">
                                 <rect key="frame" x="268" y="385" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Uol-nb-gcW"/>
@@ -840,7 +843,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A4 €200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRo-2g-luS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A4 €200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRo-2g-luS">
                                 <rect key="frame" x="268" y="406" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="b9F-lm-sPb"/>
@@ -861,7 +864,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B1 €270" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C52-Gj-QYI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B1 €270" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C52-Gj-QYI">
                                 <rect key="frame" x="268" y="435" width="65" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Z6I-Ba-e6v"/>
@@ -885,7 +888,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B2 €280" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIK-kL-9rz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B2 €280" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIK-kL-9rz">
                                 <rect key="frame" x="267" y="455" width="65" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="fgi-M8-bZt"/>
@@ -906,7 +909,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C €390" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8C-xZ-bLd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="C €390" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8C-xZ-bLd">
                                 <rect key="frame" x="272" y="476" width="56" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="a3V-Ko-1Ly"/>
@@ -927,7 +930,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bands and Annual Car Tax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRN-Tc-uuf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bands and Annual Car Tax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRN-Tc-uuf">
                                 <rect key="frame" x="-42" y="304" width="698" height="21"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -949,7 +952,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D €570" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgs-RP-uCY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="D €570" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgs-RP-uCY">
                                 <rect key="frame" x="273" y="505" width="55" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="tUG-c7-ZXd"/>
@@ -970,7 +973,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E €750" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVe-zp-WTV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="E €750" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVe-zp-WTV">
                                 <rect key="frame" x="273" y="527" width="54" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2Oq-zi-W8x"/>
@@ -991,7 +994,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F €1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-4Z-Gfo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="F €1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-4Z-Gfo">
                                 <rect key="frame" x="267" y="548" width="63" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="63" id="a4O-ol-Ky1"/>
@@ -1017,10 +1020,10 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tax_disk.png" translatesAutoresizingMaskIntoConstraints="NO" id="pS7-f0-OzU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tax_disk.png" translatesAutoresizingMaskIntoConstraints="NO" id="pS7-f0-OzU">
                                 <rect key="frame" x="84" y="123" width="433" height="168"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G €2350" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-Ox-9Xb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="G €2350" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-Ox-9Xb">
                                 <rect key="frame" x="265" y="567" width="66" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="1mX-ay-nzP"/>
@@ -1173,11 +1176,11 @@
                                 <exclude reference="iGb-hv-yZy"/>
                                 <exclude reference="RbC-72-76P"/>
                                 <exclude reference="ruB-cJ-vqd"/>
+                                <exclude reference="qQA-Hg-N9i"/>
                                 <exclude reference="Qbc-Kr-nmo"/>
                                 <exclude reference="jQF-Ao-Zku"/>
                                 <exclude reference="yN4-zA-PU4"/>
                                 <exclude reference="skI-13-t61"/>
-                                <exclude reference="qQA-Hg-N9i"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1257,6 +1260,9 @@
                                 <exclude reference="9kL-V2-ewl"/>
                                 <include reference="RbC-72-76P"/>
                                 <include reference="ruB-cJ-vqd"/>
+                                <exclude reference="ikB-Fg-QoJ"/>
+                                <exclude reference="qGu-Xu-Sok"/>
+                                <include reference="qQA-Hg-N9i"/>
                                 <exclude reference="ENR-ax-reC"/>
                                 <exclude reference="Kqx-Qd-P2b"/>
                                 <include reference="Qbc-Kr-nmo"/>
@@ -1265,9 +1271,6 @@
                                 <exclude reference="8yO-1W-jdf"/>
                                 <exclude reference="GZl-dr-qbt"/>
                                 <include reference="skI-13-t61"/>
-                                <exclude reference="ikB-Fg-QoJ"/>
-                                <exclude reference="qGu-Xu-Sok"/>
-                                <include reference="qQA-Hg-N9i"/>
                             </mask>
                         </variation>
                     </view>
@@ -1328,6 +1331,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="nhr-5m-ycL"/>
         <segue reference="NiD-MH-v0j"/>
-        <segue reference="JgB-5V-gfH"/>
+        <segue reference="OSG-4w-pzq"/>
     </inferredMetricsTieBreakers>
 </document>

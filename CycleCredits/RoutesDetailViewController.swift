@@ -37,6 +37,9 @@ class RoutesDetailViewController: UITableViewController {
         bandLabel.text = co2Band
     }
     
+   
+
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveRouteDetail" {
             if (self.routeToEdit != nil){
@@ -75,5 +78,17 @@ class RoutesDetailViewController: UITableViewController {
             co2Band = selectedCarBand
         }
     }
-
+    
+    @IBAction func editTextDate(sender: UITextField) {
+        var datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action:("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func datePickerValueChanged(sender: UIDatePicker) {
+        var dateformatter = NSDateFormatter()
+        dateformatter.dateFormat = "dd-MMM-yy"
+        routeDate.text = dateformatter.stringFromDate(sender.date)
+    }
 }
