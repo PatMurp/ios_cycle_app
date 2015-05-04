@@ -129,5 +129,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             co2Band = selectedCarBand
         }
     }
+    
+    
+    @IBAction func MapType(sender: UISegmentedControl) {
+        
+        switch(sender.selectedSegmentIndex) {
+        case 0:
+            self.mapView.mapType = MKMapType.Standard
+            break
+        case 1:
+            self.mapView.mapType = MKMapType.Satellite
+            break
+        case 2:
+            self.mapView.mapType = MKMapType.Hybrid
+            break
+        default:
+            break
+        }
+    }
 
 }

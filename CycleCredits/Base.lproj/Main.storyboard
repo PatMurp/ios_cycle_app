@@ -106,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="1423.5" y="457"/>
         </scene>
-        <!--Track Route-->
+        <!--Map View Controller-->
         <scene sceneID="4Ye-NJ-aMk">
             <objects>
                 <viewController id="dAY-7I-gbq" customClass="MapViewController" customModule="CycleCredits" customModuleProvider="target" sceneMemberID="viewController">
@@ -308,13 +308,27 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Track Route" id="0aH-SA-KEr">
+                    <navigationItem key="navigationItem" id="0aH-SA-KEr">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="home_.png" style="plain" id="5jw-Mj-xJb">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="NT5-xn-VBo" kind="unwind" identifier="CancelRouteDetail" unwindAction="cancelToRoutesViewController:" id="uiv-SK-ST4"/>
                             </connections>
                         </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="mRi-CC-Pu2">
+                            <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Standard"/>
+                                <segment title="Satellite"/>
+                                <segment title="Hybrid"/>
+                            </segments>
+                            <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="MapType:" destination="dAY-7I-gbq" eventType="valueChanged" id="h0x-kh-rIn"/>
+                            </connections>
+                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" image="checkmark_.png" style="done" id="KIB-uR-m28">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -332,7 +346,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0X-OP-86J" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NT5-xn-VBo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2953.5" y="-246"/>
+            <point key="canvasLocation" x="3009" y="-246"/>
         </scene>
         <!--CO2 Savings-->
         <scene sceneID="1Z3-5Y-yVq">
@@ -1331,6 +1345,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="nhr-5m-ycL"/>
         <segue reference="NiD-MH-v0j"/>
-        <segue reference="OSG-4w-pzq"/>
+        <segue reference="JgB-5V-gfH"/>
     </inferredMetricsTieBreakers>
 </document>
