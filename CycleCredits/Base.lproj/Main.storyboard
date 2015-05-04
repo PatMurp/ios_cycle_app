@@ -74,10 +74,10 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem image="location_.png" id="Okf-Qx-vkw">
+                        <barButtonItem style="done" systemItem="add" id="Okf-Qx-vkw">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="deo-O7-ETf" kind="presentation" identifier="MapRoute" id="TM6-Bw-LRf"/>
+                                <segue destination="wNT-5C-vxu" kind="presentation" id="Kmc-al-xtq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem image="help_.png" id="gru-jW-Ia7">
@@ -88,16 +88,16 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Routes" id="AtD-cR-2ST">
-                        <barButtonItem key="leftBarButtonItem" image="carbon_footprint.png" style="plain" id="UDU-H6-J6B">
+                        <barButtonItem key="leftBarButtonItem" image="location_.png" style="plain" id="UDU-H6-J6B">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="7he-ii-NCg" kind="show" id="vBp-6e-O17"/>
+                                <segue destination="deo-O7-ETf" kind="presentation" id="QaZ-x8-CqI"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VKs-Xc-zbm">
+                        <barButtonItem key="rightBarButtonItem" image="carbon_footprint.png" id="VKs-Xc-zbm">
                             <color key="tintColor" red="0.12549019610000001" green="0.49803921569999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="wNT-5C-vxu" kind="presentation" identifier="AddRoute" id="je4-G0-WZb"/>
+                                <segue destination="7he-ii-NCg" kind="show" id="wZZ-pF-Q2s"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -79,6 +79,7 @@ class RoutesDetailViewController: UITableViewController {
         }
     }
     
+    // date picker pops up when date field selected
     @IBAction func editTextDate(sender: UITextField) {
         var datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Date
@@ -86,6 +87,7 @@ class RoutesDetailViewController: UITableViewController {
         datePickerView.addTarget(self, action:("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
+    // update values when picker is changed
     func datePickerValueChanged(sender: UIDatePicker) {
         var dateformatter = NSDateFormatter()
         dateformatter.dateFormat = "dd-MMM-yy"
