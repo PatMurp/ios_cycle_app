@@ -22,6 +22,17 @@ class RoutesViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLogedIn")
+        
+        if (!isUserLoggedIn) {
+            // display login page
+            self.performSegueWithIdentifier("loginView", sender: self)
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -199,6 +210,14 @@ class RoutesViewController: UITableViewController {
         }
         // hide the detail view controller
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // log out and display login screen
+    @IBAction func Logout(sender: UIBarButtonItem) {
+        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        self.performSegueWithIdentifier("loginView", sender: self)
     }
 
 

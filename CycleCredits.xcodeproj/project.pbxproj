@@ -15,6 +15,8 @@
 		C53528391AD3F13600BE457B /* location_@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53528361AD3F13600BE457B /* location_@1x.png */; };
 		C535283A1AD3F13600BE457B /* location_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53528371AD3F13600BE457B /* location_@2x.png */; };
 		C535283B1AD3F13600BE457B /* location_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53528381AD3F13600BE457B /* location_@3x.png */; };
+		C549A3E31AFD259200081F81 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549A3E21AFD259200081F81 /* RegisterViewController.swift */; };
+		C549A3E51AFD305E00081F81 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549A3E41AFD305E00081F81 /* LoginViewController.swift */; };
 		C56F3EAD1ACBF9E7007556A3 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */; };
 		C56F3EB71ACC3F71007556A3 /* RoutesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */; };
 		C57664E81AC704BD00179F6A /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57664E71AC704BD00179F6A /* Calc.swift */; };
@@ -62,6 +64,8 @@
 		C53528361AD3F13600BE457B /* location_@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_@1x.png"; sourceTree = "<group>"; };
 		C53528371AD3F13600BE457B /* location_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_@2x.png"; sourceTree = "<group>"; };
 		C53528381AD3F13600BE457B /* location_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_@3x.png"; sourceTree = "<group>"; };
+		C549A3E21AFD259200081F81 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C549A3E41AFD305E00081F81 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C56F3EAC1ACBF9E7007556A3 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesDetailViewController.swift; sourceTree = "<group>"; };
 		C57664E71AC704BD00179F6A /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calc.swift; path = ../Calc.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				C56F3EB61ACC3F71007556A3 /* RoutesDetailViewController.swift */,
 				C5F654411ACFE5AC0037A001 /* HelpViewController.swift */,
 				C5DF95B31ADC0648003600B1 /* MapViewController.swift */,
+				C549A3E21AFD259200081F81 /* RegisterViewController.swift */,
+				C549A3E41AFD305E00081F81 /* LoginViewController.swift */,
 			);
 			path = CycleCredits;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C549A3E51AFD305E00081F81 /* LoginViewController.swift in Sources */,
 				C5F654421ACFE5AC0037A001 /* HelpViewController.swift in Sources */,
 				C57664E81AC704BD00179F6A /* Calc.swift in Sources */,
 				C5AE59CD1AA4A6F700DAB6B6 /* TotalsViewController.swift in Sources */,
@@ -332,6 +339,7 @@
 				C5DF95B41ADC0648003600B1 /* MapViewController.swift in Sources */,
 				C56F3EAD1ACBF9E7007556A3 /* RouteCell.swift in Sources */,
 				C5AE59EB1AA4ADDF00DAB6B6 /* RoutesViewController.swift in Sources */,
+				C549A3E31AFD259200081F81 /* RegisterViewController.swift in Sources */,
 				C5AE59ED1AA4AF3F00DAB6B6 /* Route.swift in Sources */,
 				C5AE59CB1AA4A6F700DAB6B6 /* CycleCredits.xcdatamodeld in Sources */,
 			);
