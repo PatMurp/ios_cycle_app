@@ -23,16 +23,15 @@ class RoutesViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        
+    override func viewDidAppear(animated: Bool) {
         let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLogedIn")
         
         if (!isUserLoggedIn) {
             // display login page
             self.performSegueWithIdentifier("loginView", sender: self)
         }
-        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
