@@ -93,4 +93,17 @@ class RoutesDetailViewController: UITableViewController {
         dateformatter.dateFormat = "dd-MMM-yy"
         routeDate.text = dateformatter.stringFromDate(sender.date)
     }
+    
+    // dialog message
+    func displayAlertMessage(userMeasage:String) {
+        
+        var myAlert = UIAlertController(title: "Alert", message: userMeasage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.presentViewController(myAlert, animated: true, completion: nil)
+        
+    }
 }
